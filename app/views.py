@@ -5,7 +5,6 @@ Definition of views.
 from django.shortcuts import render
 from django.http import HttpRequest
 from django.template import RequestContext
-from app.models import Curso
 from datetime import datetime
 
 def home(request):
@@ -57,8 +56,7 @@ def cadastro_cursos(request):
         context_instance = RequestContext(request,
         {
             'title':'Cadastro de cursos',
-#            'cursos': ['ADS' , 'SI', 'CC'],
-            'cursos': Curso.objects.all(),
+            'cursos': ['ADS' , 'SI', 'CC'],
             'year':datetime.now().year,
         })
     )
