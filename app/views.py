@@ -69,6 +69,8 @@ def criacao_vestibulares(request):
         {
             'title':'Criacao de Vestibulares',
             'vestibulares': ['ADS' , 'SI', 'CC'],
-            'year':datetime.now().year,
+            'dia':datetime.now().day,
+            'mes':datetime.now().month,
+            'ano':datetime.now().year,
         })
     )
