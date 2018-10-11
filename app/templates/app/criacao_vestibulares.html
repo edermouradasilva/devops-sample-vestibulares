@@ -1,16 +1,1 @@
-{% extends "app/layout.html" %}
 
-{% block content %}
-
-<div class="jumbotron">
-    <h1>Criação de Vestibulares</h1>
-</div>
-
-<table class="table">
-    <tr><th>Nome do curso</th><th>Data</th><th>Local da prova</th></tr>
-        {% for vestibular in vestibulares %}
-          <tr><td>{{ vestibular }}</td><td>{{dia}}/{{mes}}/{{ano}}</td><td>Faculdade Impacta</td></tr>
-        {% endfor %}
-</table>
-
-{% endblock %}
