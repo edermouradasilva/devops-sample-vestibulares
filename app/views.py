@@ -48,7 +48,6 @@ def about(request):
         })
     )
 
-
 def cadastro_cursos(request):
     assert isinstance(request, HttpRequest)
     return render(
@@ -57,7 +56,7 @@ def cadastro_cursos(request):
         context_instance = RequestContext(request,
         {
             'title':'Cadastro de cursos',
-            'cursos': Curso.objects.all(),
+            'cursos': ['ADS' , 'SI', 'CC'],
             'year':datetime.now().year,
         })
     )
